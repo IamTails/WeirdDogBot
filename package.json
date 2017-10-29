@@ -1,0 +1,23 @@
+{
+  "name": "weirddogbot",
+  "version": "1.0.0",
+  "description": "A moderation bot for the Weird Dog Dev Discord server",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weirddogdev/weirddogbot.git"
+  },
+  "author": "Weird Dog Dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weirddogdev/weirddogbot/issues"
+  },
+  "homepage": "https://github.com/weirddogdev/weirddogbot#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "sj.reggol": "0.0.1"
+  }
+}
