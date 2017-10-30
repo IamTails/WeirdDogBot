@@ -15,6 +15,7 @@ const Discord = require('discord.js');
         msg.channel.sendMessage("Successfully unmuted " + user + "!");
         if(!modlog) return msg.channel.send("I couldn't find ``#mod-log``")
         const embed = new Discord.RichEmbed()
+        .setTitle("Action - Title")
         .setAuthor(`${msg.author.tag}`, msg.author.avatarURL)
         .setColor(msg.guild.me.displayHexColor)
         .addField("User", user)

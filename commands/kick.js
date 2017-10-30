@@ -15,6 +15,7 @@ exports.run = async (bot, msg, args) => {
     msg.channel.send(`Successfully kicked ` + user + ` for ` + reason)
     if(!modlog) return msg.channel.send("I couldn't find ``#mod-log``")
     const embed = new Discord.RichEmbed()
+    .setTitle("Action - Kick")
     .setAuthor(`${msg.author.tag}`, msg.author.avatarURL)
     .setColor(msg.guild.me.displayHexColor)
     .addField("User", user)
