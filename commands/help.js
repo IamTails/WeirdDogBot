@@ -1,12 +1,17 @@
-const Discord = require('discord.js')
 exports.run = async (bot, msg, args) => {
-    const embed = new Discord.RichEmbed()
-        .setTitle("List of Commands")
-        .addField("Prefix", "w/")
-        .addField("`ban @mention reason`", "Everybody's favorite command")
-        .addField("`kick @mention reason`", "Kicks the provided user")
-        .addField("`mute @mention reason`", "Mutes the provided user")
-        .addField("`purge [amount] [@optional-mention]`", "Purges messages in the current channel")
-        .addField(`unmute @mention reason`, "Unmutes given user with reason");
-    msg.channel.send({embed});
+    await msg.channel.send(`
+       __**WeirdDogBot Commands**__
+
+       You can use \`w/<command>\` to use a command!
+
+       Commands for ${msg.guild.name}:
+       \`ban\` -> Ban a member (Requires \`BAN_MEMBERS\`)
+       \`kick\` -> Kick a member (Requires \`KICK_MEMBERS\`)
+       \`purge\` -> Purges 'x' amount of messages (Requires \`MANAGE_MESSAGES\`)
+       \`help\` -> This message
+       \`mute\` -> Mute a player (Requires \`MANAGE_ROLES\`)
+       \`unmute\` -> Unmute a player (Requires \`MANAGE_ROLES\`)
+
+       :warning: - Most these commands require a \`mod-log\` channel.
+    `);
 }
